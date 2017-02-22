@@ -3,6 +3,7 @@ OUTPUT_DIR = $(PWD)/output
 OUTPUT_IMAGES_DIR = $(OUTPUT_DIR)/images
 
 ROOTFS = $(OUTPUT_DIR)/rootfs
+ROOTFS_IMAGE = $(OUTPUT_IMAGES_DIR)/rootfs.ext4
 
 ARCH = arm
 CROSS_COMPILE ?= arm-linux-gnueabi-

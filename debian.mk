@@ -16,3 +16,8 @@ ifeq ($(wildcard $(ROOTFS)),)
 	sudo umount $(ROOTFS)/dev/
 	sudo rm $(ROOTFS)/usr/bin/qemu-arm-static
 endif
+
+rootfs_image:
+ifeq ($(wildcard $(ROOTFS_IMAGE)),)
+	sudo tools/mke2img -G 4 -R 1 -d $(ROOTFS) -o $(ROOTFS_IMAGE)
+endif

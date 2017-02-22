@@ -95,6 +95,7 @@ uboot: install-pre uboot-build
 ifeq ($(wildcard $(UBOOT_STAMP_INSTALLED)),)
 	$(call banner,"U-Boot installation ...")
 	cp $(UBOOT_OUT_SRC)/u-boot.img $(OUTPUT_IMAGES_DIR)
+	cp $(UBOOT_OUT_SRC)/SPL $(OUTPUT_IMAGES_DIR)
 
 	touch $(UBOOT_STAMP_INSTALLED)
 	$(call banner,"U-Boot installation DONE")
